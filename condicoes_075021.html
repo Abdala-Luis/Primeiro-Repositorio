@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transporte</title>
+</head>
+<body>
+    <h1>Txopelas</h1>
+    Velocidade do carro <input type="number" name="txtvel" id="txtvel"> km/h  
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="sol"></div>
+
+    <script>
+
+        function calcular(){
+            var txtv= document.querySelector('input#txtvel')
+            var res = document.querySelector('div#sol')
+            var v = Number(txtv.value)
+            res.innerHTML = `<p> A sua velocidade e de <strong>${v}km/h</strong></p> `
+            if(v >= 80){
+            res.innerHTML += `<p> A sua velocidade <strong>Atingiu o limite</strong></p> `}else{
+            res.innerHTML += `<p> A sua velocidade esta perfeita <strong>Dijija sempre com calma</strong></p> `
+            }
+
+        }
+
+    </script>
+</body>
+</html>
